@@ -1,86 +1,80 @@
-# 📂 Document Management & QA System  
+# 📂 Document Management & Question Answering (QA) System  
 
-A **document management and quality assurance system** designed to automate extraction and validation of key information from **underwriting and legal documents**. This project streamlines compliance checks for a real estate agency by replacing repetitive manual reviews with an **interactive, AI-powered platform**.  
+An **AI-powered document management and question answering system** that automates information extraction from **underwriting and legal documents**.  
+This platform allows users to upload documents and interactively **ask questions in natural language**, replacing repetitive manual reviews with an **intelligent API-based solution**.  
 
 ---
 
 ## 📌 Background & Problem  
-Real estate agencies handle **hundreds of underwriting and legal documents** daily.  
-- Manual review is **time-consuming, error-prone, and inconsistent**.  
-- Important details (e.g., mortgage value, client obligations, clauses) are often buried in lengthy documents.  
-- Existing tools lacked **contextual Q&A** ability to answer *domain-specific queries* quickly.  
+Real estate agencies process **large volumes of underwriting and legal documents** every day.  
+- Manual review is **slow, error-prone, and inconsistent**.  
+- Key details (e.g., tenant name, lease duration, mortgage value, client obligations) are buried in lengthy text.  
+- Traditional tools lacked the ability to provide **direct, contextual answers** to user queries.  
 
-This created a need for an **automated solution** that could:  
-- Ingest documents in multiple formats.  
-- Extract meaningful information.  
-- Allow users to interactively query documents in natural language.  
+This created a need for an **automated Question Answering (QA) solution** that could:  
+- Extract and structure information from unstructured documents.  
+- Allow interactive Q&A over contracts and reports.  
+- Reduce manual workload while improving compliance reliability.  
 
 ---
 
 ## 🎯 Objectives  
-- Automate information extraction from unstructured documents.  
-- Enable **question answering (QA)** using natural language queries.  
-- Ensure accuracy and compliance in underwriting and legal processes.  
-- Build an **easy-to-use API layer** for integration into existing workflows.  
-- Reduce **manual review workload** while improving response consistency.  
+- Enable **document-level Q&A** using natural language queries.  
+- Automate information extraction from PDFs, excel sheets, and scanned contracts.  
+- Provide a **Flask-based API** for seamless system integration.  
+- Store results securely for traceability and compliance.  
+- Reduce reliance on manual document review.  
 
 ---
 
 ## ⚙️ Solution Approach  
 1. **Document Ingestion & OCR**  
-   - Used **Apache Tika** to extract raw text from PDFs and scanned files.  
+   - Used **Apache Tika** to extract raw text from PDFs and scanned documents. 
 
 2. **Preprocessing**  
-   - Cleaned and standardized text for downstream processing.  
+   - Standardized and cleaned extracted text for downstream NLP tasks.  
 
 3. **Question Answering with LLMs**  
-   - Integrated **GPT-3.5** for contextual question answering.  
-   - Used **TAPAS** for structured document queries (tables, numbers).  
+   - Integrated **GPT-3.5** for contextual understanding and answers.  
+   - Used **TAPAS** for table-based Q&A (structured data queries).  
 
-4. **API Layer**  
-   - Built with **Flask**, exposing endpoints for:  
+4. **Interactive API Layer**  
+   - Built with **Flask**, supporting endpoints for:  
      - Document upload  
-     - Query handling  
-     - Result retrieval  
+     - Q&A queries  
+     - Structured JSON responses  
 
 5. **Database & Logging**  
-   - Stored extracted text, answers, and query logs in **Firebase**.  
-   - Ensured traceability and auditing.  
+   - Implemented **Firebase** to store documents, answers, and logs.  
+   - Enabled audit trails for compliance checks.  
 
 ---
 
 ## 🛠️ Tech Stack  
-- **OCR & Preprocessing:** Apache Tika  
-- **LLMs for QA:** GPT-3.5, TAPAS  
-- **Backend Framework:** Flask  
+- **OCR:** Apache Tika  
+- **LLMs for Q&A:** GPT-3.5, TAPAS  
+- **Backend:** Flask  
 - **Database & Hosting:** Firebase  
 - **Language:** Python 3.x  
-- **Deployment:** Local Flask API (extendable to Docker/K8s)  
+- **Deployment:** Local Flask API (extendable to Docker)  
 
 ---
 
 ## 📊 Results  
-- Reduced **manual document review time** by ~60%.  
-- Enabled **real-time querying** of underwriting/legal documents.  
-- Improved **consistency of extracted information**.  
-- Provided **auditable logs** for compliance purposes.  
-- Created a **scalable foundation** for expansion into other domains.  
+- Cut **manual review time** by ~60%.  
+- Allowed **real-time question answering** over lengthy contracts.  
+- Improved **accuracy and consistency** in extracting critical details.  
+- Provided **auditable, query-based logs** for compliance assurance.  
 
 ---
 
 ## 🚀 Future Enhancements  
-- **Web Dashboard**: Add a user-friendly UI for non-technical users.  
-- **Multi-Lingual Support**: Expand OCR + QA to multiple languages.  
-- **Policy–Regulation Alignment**: Match organizational policies with regulatory requirements.  
-- **Deployment**: Containerize with Docker & orchestrate with Kubernetes.  
-- **Advanced NLP Models**: Fine-tune domain-specific LLMs for legal/financial language.  
+- **Web Dashboard** for non-technical users.  
+- **Multi-Lingual OCR & Q&A** for international documents.  
+- **Policy–Regulation Alignment** for compliance verification.  
+- **Deployment via Docker/Kubernetes** for scalability.  
+- **Fine-tuned Legal/Financial LLMs** for domain-specific language.  
 
 ---
 
-## 📫 Contact  
-👩‍💻 **Author:** Minoli Munasinghe  
-🔗 [LinkedIn](https://www.linkedin.com/in/minolimunasinghe) | 📧 [Email](mailto:minolimunasinghe@outlook.com)  
-
----
-
-✨ This project demonstrates how **AI + OCR + APIs** can transform manual compliance-heavy workflows into **automated, intelligent, and scalable systems**.  
+✨ This project shows how **OCR + LLM-based Question Answering** can transform manual document review into an **automated, intelligent, and scalable workflow**.  
